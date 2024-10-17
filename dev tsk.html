@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .counter-container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #increase {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #decrease {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #reset {
+      background-color: #2196F3;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter-container">
+    <h1 id="counter">0</h1>
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const counterDisplay = document.getElementById('counter');
+    
+    document.getElementById('increase').addEventListener('click', () => {
+      count++;
+      counterDisplay.textContent = count;
+    });
+
+    document.getElementById('decrease').addEventListener('click', () => {
+      count--;
+      counterDisplay.textContent = count;
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+      count = 0;
+      counterDisplay.textContent = count;
+    });
+  </script>
+</body>
+</html>
